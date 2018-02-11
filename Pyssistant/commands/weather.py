@@ -3,7 +3,7 @@ from playsound import playsound
 import pyowm
 import os
 def getWeather(place):
-    owm = pyowm.OWM('8c0af6bea33f34e279cd3e5e5b0862c9')
+    owm = pyowm.OWM('XXXXXXXXXXXXXXXXXXXXXX') #Open Weather Map API Key
     observation = owm.weather_at_place(place)
     w = str(observation.get_weather()).strip("<").strip(">").replace("pyowm.webapi25.weather.Weather - reference time=", "").replace(":00+00, status=", "")
     w2 = observation.get_weather()
